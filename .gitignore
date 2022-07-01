@@ -1,0 +1,4 @@
+﻿.vs
+*.cache
+obj
+bin

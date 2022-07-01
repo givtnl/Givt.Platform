@@ -1,0 +1,1 @@
+# Common definitions and services for the Givt Platform
