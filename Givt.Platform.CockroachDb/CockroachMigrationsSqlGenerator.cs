@@ -8,7 +8,9 @@ public class CockroachMigrationsSqlGenerator : NpgsqlMigrationsSqlGenerator
 {
     public CockroachMigrationsSqlGenerator(
         MigrationsSqlGeneratorDependencies dependencies,
+#pragma warning disable EF1001 // Internal EF Core API usage.
         INpgsqlSingletonOptions npgsqlSingletonOptions)
+#pragma warning restore EF1001 // Internal EF Core API usage.
         : base(dependencies, npgsqlSingletonOptions)
     {
     }

@@ -1,6 +1,6 @@
 ﻿using Givt.Platform.Payments.Interfaces;
 using Stripe;
-using PaymentMethod = Givt.Platform.Enums.PaymentMethod;
+using PaymentMethod = Givt.Platform.Payments.Enums.PaymentMethod;
 
 namespace Givt.Platform.Payments.Stripe;
 

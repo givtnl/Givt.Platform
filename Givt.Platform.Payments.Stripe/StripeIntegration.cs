@@ -5,7 +5,7 @@ using Serilog.Sinks.Http.Logger;
 using Stripe;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
-using PaymentMethod = Givt.Platform.Enums.PaymentMethod;
+using PaymentMethod = Givt.Platform.Payments.Enums.PaymentMethod;
 
 namespace Givt.Platform.Payments.Stripe;
 

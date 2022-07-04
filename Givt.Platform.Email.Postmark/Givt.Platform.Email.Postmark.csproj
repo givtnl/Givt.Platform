@@ -4,18 +4,18 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
-    <Description>Definition of a Payment Service Provider for the Givt Platform</Description>
+    <Description>Postmark as an Email Service Provider for the Givt Platform</Description>
     <AssemblyVersion>0.0.1</AssemblyVersion>
     <FileVersion>0.0.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="10.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Postmark" Version="4.7.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Givt.Platform.Common\src\Givt.Platform.Common.csproj" />
+    <ProjectReference Include="..\Givt.Platform.Email\Givt.Platform.Email.csproj" />
   </ItemGroup>
 
 </Project>
