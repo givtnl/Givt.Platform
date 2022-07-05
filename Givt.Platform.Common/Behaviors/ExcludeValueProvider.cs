@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using Newtonsoft.Json.Serialization;
 
-namespace Givt.Donations.Infrastructure.Behaviors;
+namespace Givt.Platform.Common.Infrastructure.Behaviors;
 
 internal class ExcludeValueProvider : IValueProvider
 {

@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Serilog.Sinks.Http.Logger;
 
-namespace Givt.Donations.Infrastructure.Behaviors;
+namespace Givt.Platform.Common.Infrastructure.Behaviors;
 
 public record LoggingBehavior<TRequest, TResponse>(ILog Logger) : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
 {
