@@ -1,4 +1,4 @@
-﻿namespace Givt.Platform.Common.Entities;
+﻿namespace Givt.Platform.EF.Entities;
 
 public abstract class EntityAudit : EntityBase
 {

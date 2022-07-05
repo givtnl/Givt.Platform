@@ -1,6 +1,6 @@
-﻿using Givt.Platform.Common.Enums;
+﻿using Givt.Platform.EF.Enums;
 
-namespace Givt.Platform.Common.Interfaces;
+namespace Givt.Platform.EF.Interfaces;
 
 public interface IHistory
 {

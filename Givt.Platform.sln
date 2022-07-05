@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Givt.Platform.FileStorage",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Givt.Platform.CockroachDb", "Givt.Platform.CockroachDb\Givt.Platform.CockroachDb.csproj", "{F8EB5543-0A5C-43E9-A91E-77EBFBF68450}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Givt.Platform.EF", "Givt.Platform.EF\Givt.Platform.EF.csproj", "{D5D81FD7-EC53-45CE-8C7C-02370A73AE84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{F8EB5543-0A5C-43E9-A91E-77EBFBF68450}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8EB5543-0A5C-43E9-A91E-77EBFBF68450}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8EB5543-0A5C-43E9-A91E-77EBFBF68450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5D81FD7-EC53-45CE-8C7C-02370A73AE84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5D81FD7-EC53-45CE-8C7C-02370A73AE84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5D81FD7-EC53-45CE-8C7C-02370A73AE84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5D81FD7-EC53-45CE-8C7C-02370A73AE84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

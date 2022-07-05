@@ -1,4 +1,4 @@
-﻿namespace Givt.Platform.Common.Enums;
+﻿namespace Givt.Platform.EF.Enums;
 
 public enum EntityLogReason
 {
