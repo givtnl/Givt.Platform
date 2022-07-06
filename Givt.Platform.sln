@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Givt.Platform.CockroachDb",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Givt.Platform.EF", "Givt.Platform.EF\Givt.Platform.EF.csproj", "{D5D81FD7-EC53-45CE-8C7C-02370A73AE84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Givt.Platform.JWT", "Givt.Platform.JWT\Givt.Platform.JWT.csproj", "{7F8EEE81-A2B8-4ADB-8E61-F953ADB39B93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{D5D81FD7-EC53-45CE-8C7C-02370A73AE84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5D81FD7-EC53-45CE-8C7C-02370A73AE84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5D81FD7-EC53-45CE-8C7C-02370A73AE84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F8EEE81-A2B8-4ADB-8E61-F953ADB39B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F8EEE81-A2B8-4ADB-8E61-F953ADB39B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F8EEE81-A2B8-4ADB-8E61-F953ADB39B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F8EEE81-A2B8-4ADB-8E61-F953ADB39B93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
