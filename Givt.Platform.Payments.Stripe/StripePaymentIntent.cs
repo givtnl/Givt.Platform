@@ -2,7 +2,7 @@
 
 namespace Givt.Platform.Payments.Stripe;
 
-internal class StripePaymentIntent : ISinglePaymentServicePaymentIntent
+internal class StripePaymentIntent : IPaymentInbound
 {
     public string TransactionReference { get; }
     public string ClientToken { get; }

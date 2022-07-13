@@ -1,10 +1,10 @@
 ﻿using Givt.Platform.Payments.Interfaces;
 using Stripe;
-using PaymentMethod = Givt.Platform.Payments.Enums.PaymentMethod;
+using PaymentMethod = Givt.Platform.Common.Enums.PaymentMethod;
 
 namespace Givt.Platform.Payments.Stripe;
 
-internal class StripePaymentNotification : ISinglePaymentNotification
+internal class StripePaymentNotification : IInboundPaymentNotification
 {
     private readonly Event stripeEvent;
     private readonly PaymentIntent paymentIntent;

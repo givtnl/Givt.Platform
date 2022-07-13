@@ -2,4 +2,6 @@
 
 public interface IPaymentInbound
 {
+    string TransactionReference { get; }
+    string ClientToken { get; }
 }

@@ -1,9 +1,9 @@
-﻿using Givt.Platform.Payments.Enums;
+﻿using Givt.Platform.Common.Enums;
 using MediatR;
 
 namespace Givt.Platform.Payments.Interfaces;
 
-public interface ISinglePaymentNotification : INotification
+public interface IInboundPaymentNotification : INotification
 {
     string TransactionReference { get; }
     DateTime? TransactionDate { get; }

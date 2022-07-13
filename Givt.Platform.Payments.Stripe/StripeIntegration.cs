@@ -1,16 +1,16 @@
-﻿using Givt.Platform.Payments.Interfaces;
+﻿using Givt.Platform.Common.Enums;
+using Givt.Platform.Payments.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using Serilog.Sinks.Http.Logger;
 using Stripe;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
-using PaymentMethod = Givt.Platform.Payments.Enums.PaymentMethod;
+using PaymentMethod = Givt.Platform.Common.Enums.PaymentMethod;
 
 namespace Givt.Platform.Payments.Stripe;
 
-// Setup polymorphic dispatch, this handler is now a "generic" handler for every IRawSinglePaymentNotification
-public class StripeIntegration : ISinglePaymentService
+public class StripeIntegration : IPaymentService
 {
     private const string SignatureHeaderKey = "Stripe-Signature";
     private readonly StripeOptions _settings;
@@ -22,11 +22,25 @@ public class StripeIntegration : ISinglePaymentService
         _log = log;
     }
 
-    public async Task<ISinglePaymentServicePaymentIntent> CreatePaymentIntent(
-        string currency, decimal amount,
+    public PaymentProvider PaymentProvider => PaymentProvider.Stripe;
+
+    public IPaymentCost GetInboundCost(PaymentMethod paymentMethod, decimal amount, string currency, string senderCountry, string recipientCountry)
+    {
+        return null; // TODO: implement
+    }
+
+    public IPaymentCost GetOutboundCost(PaymentMethod paymentMethod, decimal amount, string currency, string senderCountry, string recipientCountry)
+    {
+        return null; // TODO: implement
+    }
+
+    public async Task<IPaymentInbound> CreatePaymentInboundAsync(
+        PaymentMethod paymentMethod,
+        string currency,
+        decimal amount,
         decimal applicationFee,
         string description,
-        string accountId, PaymentMethod paymentMethod)
+        string accountId)
     {
         _log.Debug("Creating a Stripe Payment Intent: currency='{0}', amount='{1}', applicationFee='{2}', accountId='{3}', paymentMethod={4}",
             new object[] { currency, amount, applicationFee, accountId, paymentMethod });
@@ -76,6 +90,11 @@ public class StripeIntegration : ISinglePaymentService
         return new StripePaymentIntent(paymentIntent.Id, paymentIntent.ClientSecret);
     }
 
+    public IPaymentInboundNotification GetNotification(string json)
+    {
+        return null; // TODO: implement
+    }
+
     private string SanitizeDescriptor(string descriptor, int minLength, int maxLength)
     {
         var result = Regex.Replace(descriptor, "[<>\\'\"*]", string.Empty, RegexOptions.Compiled).Trim();
@@ -86,12 +105,8 @@ public class StripeIntegration : ISinglePaymentService
         return result;
     }
 
-    public bool CanHandle(IHeaderDictionary headerDictionary)
-    {
-        return headerDictionary.ContainsKey(SignatureHeaderKey);
-    }
 
-    public ISinglePaymentNotification ConstructNotification(string json, IHeaderDictionary headerDictionary)
+    public IInboundPaymentNotification ConstructNotification(string json, IHeaderDictionary headerDictionary)
     {
         Event stripeEvent = EventUtility.ConstructEvent(json, headerDictionary[SignatureHeaderKey], _settings.EndpointSecret);
 
@@ -109,5 +124,5 @@ public class StripeIntegration : ISinglePaymentService
 
         return new StripePaymentNotification(stripeEvent);
     }
-}
 
+}

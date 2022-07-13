@@ -1,4 +1,5 @@
-﻿using Givt.Platform.Payments.Enums;
+﻿using Givt.Platform.Common.Enums;
+using Givt.Platform.Payments.Interfaces;
 
 namespace Givt.Platform.Payments.Interfaces;
 
