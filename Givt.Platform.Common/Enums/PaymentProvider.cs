@@ -1,4 +1,4 @@
-﻿namespace Givt.Platform.Payments.Enums;
+﻿namespace Givt.Platform.Common.Enums;
 
 public enum PaymentProvider
 {
